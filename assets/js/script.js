@@ -199,10 +199,11 @@ $(document).ready(function() {
     // Parallax effect for hero section
     $(window).scroll(function() {
         var scrollTop = $(this).scrollTop();
+        var wHeight = + $(window).height();
         var heroHeight = $('.hero-section').outerHeight();
         
-        if (scrollTop < heroHeight) {
-            $('.hero-section').css('transform', 'translateY(' + scrollTop * 0.5 + 'px)');
+        if (scrollTop + wHeight > heroHeight) {
+            $('.hero-section').css('transform', 'translateY(' + (scrollTop + wHeight - heroHeight) * 0.5 + 'px)');
         }
     });
 
