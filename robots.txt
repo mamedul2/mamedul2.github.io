@@ -1,0 +1,14 @@
+User-agent: *
+
+# Allow
+Allow: /
+Allow: /assets/
+
+# Disallow sensitive areas
+Disallow: /.gitignore
+
+# Sitemap location
+Sitemap: https://mamedul2.github.io/sitemap.xml
+
+# Crawl delay (optional)
+Crawl-delay: 1
