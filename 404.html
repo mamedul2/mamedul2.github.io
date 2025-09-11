@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="apple-touch-icon" sizes="180x180" href=".apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <script>
+	if( !(window.location.pathname == "/" || window.location.pathname == "" ) ){
+		// Redirect to home after 0.5 seconds
+		window.location.href = "https://mamedul.github.io" + window.location.pathname + window.location.search + window.location.hash;
+	}
+  </script>
+
+  <title>404 - Page Not Found</title>
+  <style>
+    :root {
+      --bg-color: #f9fafb;
+      --text-color: #1f2937;
+      --accent-color: #3b82f6;
+    }
+    body {
+      margin: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      background: var(--bg-color);
+      color: var(--text-color);
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+      text-align: center;
+      padding: 2rem;
+    }
+    .container {
+      max-width: 600px;
+      padding: 2rem;
+    }
+    h1 {
+      font-size: clamp(4rem, 8vw, 6rem);
+      margin: 0;
+      color: var(--accent-color);
+    }
+    p {
+      font-size: 1.25rem;
+      margin: 1rem 0 2rem;
+      line-height: 1.6;
+    }
+    a {
+      display: inline-block;
+      text-decoration: none;
+      background: var(--accent-color);
+      color: white;
+      padding: 0.75rem 1.5rem;
+      border-radius: 0.75rem;
+      font-weight: 600;
+      transition: background 0.2s ease-in-out;
+    }
+    a:hover {
+      background: #2563eb;
+    }
+    .url {
+      display: block;
+      margin-top: 1rem;
+      font-size: 0.9rem;
+      color: #6b7280;
+      word-break: break-all;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>404</h1>
+    <p>Oops! The page you are looking for doesn’t exist.</p>
+    <a href="/">⬅ Back to Home</a>
+    <span class="url" id="url"></span>
+  </div>
+
+  <script>
+    // Show the incorrect URL for better UX
+    document.getElementById("url").textContent = window.location.href;
+    // Optionally update the title dynamically
+    document.title = "404 - Page Not Found";
+  </script>
+</body>
+</html>
